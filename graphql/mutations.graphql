@@ -1,0 +1,418 @@
+# this is an auto generated file. This will be overwritten
+mutation CreatePlace($input: CreatePlaceInput!) {
+  createPlace(input: $input) {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation UpdatePlace($input: UpdatePlaceInput!) {
+  updatePlace(input: $input) {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation DeletePlace($input: DeletePlaceInput!) {
+  deletePlace(input: $input) {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation CreateWizEvent($input: CreateWizEventInput!) {
+  createWizEvent(input: $input) {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation UpdateWizEvent($input: UpdateWizEventInput!) {
+  updateWizEvent(input: $input) {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation DeleteWizEvent($input: DeleteWizEventInput!) {
+  deleteWizEvent(input: $input) {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+mutation DeleteUser($input: DeleteUserInput!) {
+  deleteUser(input: $input) {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+mutation CreateTicket($input: CreateTicketInput!) {
+  createTicket(input: $input) {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}
+mutation UpdateTicket($input: UpdateTicketInput!) {
+  updateTicket(input: $input) {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}
+mutation DeleteTicket($input: DeleteTicketInput!) {
+  deleteTicket(input: $input) {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}

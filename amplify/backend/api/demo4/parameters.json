@@ -1,0 +1,4 @@
+{
+    "AppSyncApiName": "demo4",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST"
+}

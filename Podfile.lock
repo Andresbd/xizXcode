@@ -1,0 +1,67 @@
+PODS:
+  - AWSAppSync (2.10.4):
+    - AWSCore (~> 2.9.0)
+    - ReachabilitySwift (= 4.3.0)
+    - SQLite.swift (= 0.11.5)
+  - AWSAuthCore (2.9.6):
+    - AWSCore (= 2.9.6)
+  - AWSAuthUI (2.9.6):
+    - AWSAuthCore (= 2.9.6)
+    - AWSCore (= 2.9.6)
+  - AWSCognito (2.9.6):
+    - AWSCore (= 2.9.6)
+  - AWSCognitoIdentityProvider (2.9.6):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.9.6)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.9.6)
+  - AWSMobileClient (2.9.6):
+    - AWSAuthCore (= 2.9.6)
+    - AWSCognitoIdentityProvider (= 2.9.6)
+  - AWSUserPoolsSignIn (2.9.6):
+    - AWSAuthCore (= 2.9.6)
+    - AWSCognitoIdentityProvider (= 2.9.6)
+  - ReachabilitySwift (4.3.0)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
+
+DEPENDENCIES:
+  - AWSAppSync (~> 2.10.0)
+  - AWSAuthUI
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - AWSCore (~> 2.9.0)
+  - AWSMobileClient
+  - AWSUserPoolsSignIn
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSAppSync
+    - AWSAuthCore
+    - AWSAuthUI
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSUserPoolsSignIn
+    - ReachabilitySwift
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  AWSAppSync: 3292d81bd14d935fc31482f217564b7fdffe7565
+  AWSAuthCore: 53c04ee27416dff0382fffec644e2cb15b24fcc0
+  AWSAuthUI: df525f360e42c9928003306084eb00a881e696ad
+  AWSCognito: ed751fafda724b46134dd2cec9edcaaeb783259d
+  AWSCognitoIdentityProvider: 5f2d07cad68cd9e1b7d05b7dbb7d2676cc5d487d
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: dd24895a435764c4a8b0bcc4bb2f0c78f55b0e11
+  AWSMobileClient: 5806fa54854b921924df4a5567c9d27d9cf52434
+  AWSUserPoolsSignIn: 76eb0e9ebfd98e1da3d8b93c23d6145e2a224c38
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+
+PODFILE CHECKSUM: 30ac38908aaa68e4db0b1bea328e1ffa43c2dbb1
+
+COCOAPODS: 1.7.0.rc.1

@@ -1,0 +1,418 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreatePlace {
+  onCreatePlace {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnUpdatePlace {
+  onUpdatePlace {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnDeletePlace {
+  onDeletePlace {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnCreateWizEvent {
+  onCreateWizEvent {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnUpdateWizEvent {
+  onUpdateWizEvent {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnDeleteWizEvent {
+  onDeleteWizEvent {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+subscription OnCreateUser {
+  onCreateUser {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateUser {
+  onUpdateUser {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteUser {
+  onDeleteUser {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreateTicket {
+  onCreateTicket {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}
+subscription OnUpdateTicket {
+  onUpdateTicket {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}
+subscription OnDeleteTicket {
+  onDeleteTicket {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}

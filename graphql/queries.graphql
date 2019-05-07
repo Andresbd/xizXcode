@@ -1,0 +1,365 @@
+# this is an auto generated file. This will be overwritten
+query GetPlace($id: ID!) {
+  getPlace(id: $id) {
+    id
+    name
+    description
+    bookingCost
+    address {
+      city
+      country
+      address_line1
+      address_state
+      address_zip
+    }
+    seatingConfiguration {
+      category
+      capacity
+      pricing
+    }
+    owner
+    wizevents {
+      items {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+query ListPlaces(
+  $filter: ModelPlaceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPlaces(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    nextToken
+  }
+}
+query GetWizEvent($id: ID!) {
+  getWizEvent(id: $id) {
+    id
+    name
+    description
+    createdAt
+    owner
+    validUntil
+    place {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+    pictures {
+      ...S3Object
+    }
+  }
+}
+query ListWizEvents(
+  $filter: ModelWizEventFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWizEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    nextToken
+  }
+}
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    username
+    email
+    registered
+    group
+    tickets {
+      items {
+        id
+        category
+        seat
+        value
+      }
+      nextToken
+    }
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetTicket($id: ID!) {
+  getTicket(id: $id) {
+    id
+    wizevent {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    category
+    seat
+    value
+    owner {
+      id
+      username
+      email
+      registered
+      group
+      tickets {
+        nextToken
+      }
+    }
+  }
+}
+query ListTickets(
+  $filter: ModelTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTickets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      wizevent {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      category
+      seat
+      value
+      owner {
+        id
+        username
+        email
+        registered
+        group
+      }
+    }
+    nextToken
+  }
+}
+query SearchPlaces(
+  $filter: SearchablePlaceFilterInput
+  $sort: SearchablePlaceSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchPlaces(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      bookingCost
+      address {
+        city
+        country
+        address_line1
+        address_state
+        address_zip
+      }
+      seatingConfiguration {
+        category
+        capacity
+        pricing
+      }
+      owner
+      wizevents {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    nextToken
+  }
+}
+query SearchWizEvents(
+  $filter: SearchableWizEventFilterInput
+  $sort: SearchableWizEventSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchWizEvents(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      createdAt
+      owner
+      validUntil
+      place {
+        id
+        name
+        description
+        bookingCost
+        owner
+      }
+      tickets {
+        nextToken
+      }
+      pictures {
+        ...S3Object
+      }
+    }
+    nextToken
+  }
+}
+query SearchTickets(
+  $filter: SearchableTicketFilterInput
+  $sort: SearchableTicketSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchTickets(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      wizevent {
+        id
+        name
+        description
+        createdAt
+        owner
+        validUntil
+      }
+      category
+      seat
+      value
+      owner {
+        id
+        username
+        email
+        registered
+        group
+      }
+    }
+    nextToken
+  }
+}
